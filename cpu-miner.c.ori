@@ -1355,11 +1355,8 @@ start:
 			else
 				rc = work_decode(res, &g_work);
 			if (rc) {
-				applog(LOG_INFO, ">> Target: %08x%08x%08x%08x%08x%08x%08x%08x",
-                                       g_work.target[7], g_work.target[6], g_work.target[5], g_work.target[4],
-                                       g_work.target[3], g_work.target[2], g_work.target[1], g_work.target[0]);
-                                time(&g_work_time);
-                                restart_threads();
+				time(&g_work_time);
+				restart_threads();
 			}
 			pthread_mutex_unlock(&g_work_lock);
 			json_decref(val);
