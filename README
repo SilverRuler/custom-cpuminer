@@ -8,6 +8,17 @@ pm2 restart btc-miner
 pm2 logs btc-miner
 
 
+<br>
+make clean
+./configure --disable-assembly
+make
+<br>
+<br>
+#참고#
+1. 어셈블리 최적화 비활성화
+2. 로그출력
+으로 인한 해시파워 감소
+
 
 
 crontab -e
